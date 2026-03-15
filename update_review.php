@@ -8,7 +8,6 @@ $rating = $_POST['rating'];
 $comment = $_POST['comment'];
 $book_id = $_POST['book_id'];
 
-/* update review */
 
 $query = "UPDATE reviews 
           SET rating='$rating', comment='$comment'
@@ -16,7 +15,6 @@ $query = "UPDATE reviews
 
 mysqli_query($conn,$query);
 
-/* redirect back to the book page */
 
 header("Location: book_details.php?id=".$book_id);
 exit();

@@ -4,7 +4,7 @@ session_start();
 include "includes/db.php";
 include "includes/header.php";
 
-/* check if user logged in */
+
 
 if(!isset($_SESSION['user_id']))
 {

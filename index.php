@@ -20,7 +20,7 @@ include "includes/header.php";
 <body>
 
 
-<!-- HERO SECTION -->
+
 
 <section class="hero">
 
@@ -86,8 +86,6 @@ View Details
 </div>
 
 
-
-<!-- RECENTLY ADDED BOOKS -->
 
 <div class="container mt-5">
 
@@ -180,7 +178,7 @@ Explore More Books
 </div>
 
 
-<!-- FOOTER -->
+
 
 <footer class="footer mt-5 text-center text-light p-3">
 

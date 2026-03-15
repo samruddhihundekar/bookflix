@@ -3,7 +3,6 @@
 session_start();
 include "includes/db.php";
 
-/* check if user logged in */
 
 if(!isset($_SESSION['user_id']))
 {
@@ -14,7 +13,7 @@ if(!isset($_SESSION['user_id']))
 $user_id = $_SESSION['user_id'];
 $book_id = $_GET['id'];
 
-/* prevent duplicate wishlist */
+
 
 $check = "SELECT * FROM wishlist 
           WHERE user_id='$user_id' 
@@ -30,7 +29,6 @@ if(mysqli_num_rows($result) == 0)
     mysqli_query($conn,$query);
 }
 
-/* return to previous page */
 
 header("Location: " . $_SERVER['HTTP_REFERER']);
 exit();

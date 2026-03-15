@@ -10,7 +10,7 @@ $book = mysqli_fetch_assoc($result);
 
 $user_id = $_SESSION['user_id'] ?? 0;
 
-/* Wishlist check */
+
 
 $wish_query = "SELECT * FROM wishlist 
                WHERE user_id='$user_id' 
@@ -19,7 +19,7 @@ $wish_query = "SELECT * FROM wishlist
 $wish_result = mysqli_query($conn,$wish_query);
 $in_wishlist = mysqli_num_rows($wish_result) > 0;
 
-/* Review check (1 user = 1 review) */
+
 
 $review_query = "SELECT * FROM reviews 
                  WHERE user_id='$user_id' 
@@ -46,7 +46,7 @@ $user_review = mysqli_fetch_assoc($review_result);
 
 <div class="row">
 
-<!-- BOOK COVER -->
+
 <div class="col-md-4 text-center">
 
 <div class="card bg-dark border-0 shadow-lg p-3">
@@ -58,7 +58,7 @@ $user_review = mysqli_fetch_assoc($review_result);
 </div>
 
 
-<!-- BOOK DETAILS -->
+
 <div class="col-md-8">
 
 <div class="d-flex align-items-center justify-content-between mb-3">
@@ -110,7 +110,6 @@ title="Add to Wishlist">🤍</a>
 
 <?php if($user_review) { ?>
 
-<!-- UPDATE REVIEW -->
 
 <form method="POST" action="update_review.php">
 
@@ -137,7 +136,7 @@ title="Add to Wishlist">🤍</a>
 
 <?php } else { ?>
 
-<!-- ADD REVIEW -->
+
 
 <form method="POST" action="add_review.php">
 

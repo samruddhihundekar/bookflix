@@ -9,7 +9,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
 
 <h2 class="text-white mb-4">Browse Books</h2>
 
-<!-- Search Bar -->
+
 
 <form method="GET" class="mb-4">
 
